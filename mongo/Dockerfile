@@ -15,7 +15,7 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu $(cat /etc/lsb-release | grep D
 # Update apt-get sources AND install MongoDB
 RUN apt-get update && apt-get install -y mongodb-org
 
-ENV MONGODB_NAME="restaurants"
+ENV MONGODB_NAME="restaurant"
 ENV MONGODB_USER="reto"
 ENV MONGODB_PASS="mongo"
 
