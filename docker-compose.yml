@@ -9,7 +9,7 @@ services:
     build:
       context: .
     environment:
-      - MONGO_URI=mongodb://djfroko:mongo@app:27017/restaurant
+      - MONGO_URI=mongodb://reto:mongo@app:27017/restaurant
     ports:
       - "8080:8080"
 
