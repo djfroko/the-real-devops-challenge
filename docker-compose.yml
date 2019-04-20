@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    image: app
+    restart: always
+    links:
+      - mongo_app
+    build:
+      context: .
+    environment:
+      - MONGO_URI=mongodb://djfroko:mongo@app:27017/restaurants
+    ports:
+      - "8080:8080"
+
+  mongo_app:
+    container_name: mongoDB
+    image: mongoDB
+    restart: always
+    build:
+      context: data
+    environment:
+      MONGO_INITDB_DATABASE: restaurants
+      MONGO_INITDB_ROOT_USERNAME: reto
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    ports:
+      - 27017:27017
