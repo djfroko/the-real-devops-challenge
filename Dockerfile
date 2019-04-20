@@ -2,7 +2,7 @@ FROM python:3
 
 WORKDIR /app
 
-ENV MONGO_URI=mongodb://djfroko:mongo@localhost:27017/admin
+ENV MONGO_URI=mongodb://reto:mongo@localhost:27017/admin
 
 COPY app.py /app/app.py
 COPY src /app/src
