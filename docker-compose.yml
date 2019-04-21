@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   app:
     container_name: app
@@ -23,5 +23,6 @@ services:
       MONGO_INITDB_DATABASE: restaurant
       MONGO_INITDB_ROOT_USERNAME: reto
       MONGO_INITDB_ROOT_PASSWORD: mongo
+   
     ports:
       - 27017:27017
