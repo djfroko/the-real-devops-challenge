@@ -15,7 +15,7 @@ services:
       - "8080:8080"
 
   mongo_app:
-    container_name: mongoDB
+    container_name: mongoRETO
     image: mongo
     restart: always
     build:
@@ -25,6 +25,6 @@ services:
       MONGO_INITDB_ROOT_USERNAME: reto
       MONGO_INITDB_ROOT_PASSWORD: mongo
      volumes:
-      - /mnt/data/mongo:/data/db
+      - ./mnt/data/mongo:/data/db
     ports:
       - 27017:27017
