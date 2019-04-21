@@ -5,7 +5,7 @@ services:
     image: app
     restart: always
     links:
-      - app:mongoDB
+      - mongoDB
     build:
       context: .
     environment:
@@ -23,6 +23,7 @@ services:
       MONGO_INITDB_DATABASE: restaurant
       MONGO_INITDB_ROOT_USERNAME: reto
       MONGO_INITDB_ROOT_PASSWORD: mongo
-   
+     volumes:
+      - /mnt/data/mongo:/data/db
     ports:
       - 27017:27017
