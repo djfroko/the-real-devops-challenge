@@ -15,7 +15,7 @@ services:
 
   mongo_app:
     container_name: mongoDB
-    image: mongoDB
+    image: mongo
     restart: always
     build:
       context: data
